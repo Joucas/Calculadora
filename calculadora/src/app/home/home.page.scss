@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .altura-base{
@@ -16,28 +17,51 @@
   display: flex;
 
   .calculadora{
-    background: rgb(209,209,209);
-    background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(180,180,180,1) 100%);
+    background: rgb(39, 39, 39);
+    border-radius: .75em;
+    box-shadow: 5px 5px 10px rgb(130, 130, 130, 0.3);
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      transform: translateY(-10px);
+      transition: all .3s ease-in-out;
+    }
+
+    .exib-num{
+      display: flex;
+      text-align: end;
+      align-items: center;
+      font-size: 3.5em;
+      height: 25vh;
+      padding-right: 1rem;
+    }
+
+    .numbers{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .base__button{
+        width: 70%;
+        height: 8.5vh;
+        margin-left: 15%;
+        margin-bottom: 1.5rem;
+        --background: rgb(20, 20, 20);
+        box-shadow: 5px 5px 5px 0px rgba(139, 139, 139, 0.3);
+        font-size: 1.5em;
+      }
+
+      .bg__btn_ope{
+        --background: #F29F05;
+      }
+
+      .bg__btn-igual{
+        --background: #F27405;
+      }
+
+      .bg__btn-resto{
+        --background: #2f2f2f;
+      }
+    }
   }
-
-  .base__button{
-    width: 70%;
-    height: 9vh;
-    padding: .5vh;
-    margin-left: 15%;
-    border: 2px solid white;
-    --background: rgb(20, 20, 20);
-    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.3);
-  }
-
-}
-
-.exib-num{
-  height: 35vh;
-}
-
-.numbers{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
