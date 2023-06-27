@@ -1,1 +1,3 @@
 # Calculadora
+
+Joaquim André
